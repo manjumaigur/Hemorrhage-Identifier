@@ -1,0 +1,14 @@
+{% extends 'hemorrhage_identifier/base.html' %}
+
+{% block title %}Hemorrhage Identifier{% endblock %}
+
+{% block content_title %}Add a CT scan image{% endblock %}
+
+{% block content %}
+	{% include 'hemorrhage_identifier/messages.html' %}
+	<form action="" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{% include 'hemorrhage_identifier/form_template.html' %}
+		<button type="submit" class="btn btn-success quarterWidth" id="submitBtn"><span class="glyphicon glyphicon-info-sign"></span>&nbsp; Identify Hemorrhage or not</button>
+	</form>
+{% endblock %}

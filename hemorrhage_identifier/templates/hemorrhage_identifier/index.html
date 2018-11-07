@@ -1,0 +1,12 @@
+{% extends 'hemorrhage_identifier/base.html' %}
+
+{% block title %}Hemorrhage Identifier{% endblock %}
+
+{% block content_title %}Hemorrhage Identifier{% endblock %}
+
+{% block content %}
+	{% include 'hemorrhage_identifier/messages.html' %}
+	<div class="text-center">
+		<a href="{% url 'hemorrhage:image-form' %}"><button class="btn btn-info">Hemorrhage Identifier</button></a>
+	</div>
+{% endblock %}

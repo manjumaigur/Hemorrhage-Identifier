@@ -1,0 +1,11 @@
+.navbar {
+	border-radius: 0;
+}
+
+nav a {
+	color: white !important;
+}
+
+nav a:visited {
+	color: white !important;
+}

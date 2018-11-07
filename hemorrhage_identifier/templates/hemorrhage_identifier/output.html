@@ -1,0 +1,33 @@
+{% extends 'hemorrhage_identifier/base.html' %}
+
+{% block title %}Hemorrhage Identifier{% endblock %}
+
+{% block content_title %}Result{% endblock %}
+
+{% block content %}
+	{% include 'hemorrhage_identifier/messages.html' %}
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<tbody>
+				<tr>
+					<th>Predicted output</th>
+					<td>
+						{% if hemorrhage.output == 1 %}
+							<h2 class="text-danger">Hemorrhage is present</h2>
+						{% elif hemorrhage.output == 0 %}
+							<h2 class="text-success">No Hemorrhage</h2>
+						{% else %}
+							<span>Error in identifying</span>
+						{% endif %}
+					</td>
+				</tr>
+				<tr>
+					<th>CT scan image: </th>
+					<td>
+						<img src="{{ hemorrhage.ct_scan_image.url }}" alt="ct_scan_image" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+{% endblock %}
